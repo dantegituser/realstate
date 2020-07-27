@@ -1,0 +1,115 @@
+
+#buscador{
+    align-self: center;
+    flex: 1 0 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+
+    h4 {
+        font-size: 3em;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        transform: translateY(-40px);
+        border-right: 2px solid rgba(255,255,255, 0.70);
+        white-space: nowrap;
+        overflow: hidden;
+
+    }
+    input {
+        width:100%;
+        padding: 15px 10px 10px;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        font-size: 1.2em;
+        line-height: 1.2;
+        transition: .5s;
+        -webkit-transition: .5s;
+        color: grey;
+    }
+   
+
+    input:focus ~ label,
+    input:valid ~ label{
+        top:-5px;
+        color:rgb(219, 111, 129);
+        font-size: 1em;
+    }
+    div {
+        position: relative;
+        width:300px;
+    }
+    div label {
+        position: absolute;
+        top: 12px;
+        left:10px;
+        pointer-events: none;
+        transition: .5s;
+        -webkit-transition: .5s;
+        font-size: 1.5em;
+        color: gray;
+    }
+    button{
+        background: none;
+        border:none;
+        position: absolute;
+        top:10px;
+        right: 5px;
+        cursor: pointer;
+    }
+}
+
+.anim-typewr {
+    animation: typewriter 4s steps(40) 1s 1 normal both,
+    blinkCursor 500ms steps(40) infinite normal;
+}
+
+@keyframes typewriter{
+
+    from {
+        width:0;
+    }
+    to {
+        width: 300px;
+    }
+}
+
+@keyframes blinkCursor {
+    from {
+        border-right-color: rgba(255,255,255, 0.70);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+.home-section-cont{
+    
+    h1{
+        font-family: 'Roboto', sans-serif;
+        font-weight: black;
+        color:rgb(13, 89, 175);
+        font-size: 8em;
+    }
+    .content-small{
+        width:80%;
+        margin: 0 auto;
+        display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    .homeimg{
+        flex: 1 0 70%;
+    }
+    .homedesc{
+        flex: 1 0 30%;
+    }
+    }
+
+}
