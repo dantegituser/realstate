@@ -34,5 +34,14 @@ function moverSlider(){
 
 }
 
+// h1 movement
+
+TweenMax.set('.archtitle', { left: '90%'});
+TweenMax.set('.inttitle', { left: '-10%'});
+var tlh1 = new TimelineMax({ repeat:-1, yoyo:true});
+tlh1.to('.archtitle', 24 ,{ left: '-10%',ease:Linear.easeNone},'h1movement')
+.to('.inttitle', 24 ,{ left: '90%',ease:Linear.easeNone},'h1movement');
+//TweenMax.fromTo('.archtitle', 24 ,{ left:'110%' }, { left: '-10%',ease:Linear.easeNone, repeat: -1}, 24);
+
 
 })
