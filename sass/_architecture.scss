@@ -1,0 +1,58 @@
+#architecture{
+    .main-container{
+        #hero{
+            height: 60px;
+        }
+    }
+}
+
+.architecture-cont{
+    margin-bottom: 30px;
+    h1{
+        font-family: 'Damion', cursive;
+        text-align: center;
+        font-size: 8em;
+        text-shadow: 4px 4px 2px #c0a54b;
+    }
+    .content-small{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .architecture-widget {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        
+        .listarch{
+            height: 400px;
+            overflow: hidden;
+            flex: 1 0 40%;
+            .list-address{
+                li {
+                    width: 100%;
+                    padding: 5px 12px;
+                    font-size: 1.5em;
+                    text-align: center;
+                    &:hover{
+                        font-size: 1.6em;
+                        font-weight: bold;
+                        border-bottom: 2px solid blue;
+                    }
+                }
+            }
+        }
+        .imagen-arch{
+            flex: 1 0 50%;
+            position: relative;
+            height: 400px;
+
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                max-height: 100%;
+                width: auto;
+            }
+        }
+    }
+}

@@ -463,3 +463,44 @@ footer {
       -moz-border-radius: 50%;
       border-radius: 50%;
       border: 1px solid #fff; }
+
+#architecture .main-container #hero {
+  height: 60px; }
+
+.architecture-cont {
+  margin-bottom: 30px; }
+  .architecture-cont h1 {
+    font-family: 'Damion', cursive;
+    text-align: center;
+    font-size: 8em;
+    text-shadow: 4px 4px 2px #c0a54b; }
+  .architecture-cont .content-small {
+    width: 80%;
+    margin: 0 auto; }
+  .architecture-cont .architecture-widget {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around; }
+    .architecture-cont .architecture-widget .listarch {
+      height: 400px;
+      overflow: hidden;
+      flex: 1 0 40%; }
+      .architecture-cont .architecture-widget .listarch .list-address li {
+        width: 100%;
+        padding: 5px 12px;
+        font-size: 1.5em;
+        text-align: center; }
+        .architecture-cont .architecture-widget .listarch .list-address li:hover {
+          font-size: 1.6em;
+          font-weight: bold;
+          border-bottom: 2px solid blue; }
+    .architecture-cont .architecture-widget .imagen-arch {
+      flex: 1 0 50%;
+      position: relative;
+      height: 400px; }
+      .architecture-cont .architecture-widget .imagen-arch img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-height: 100%;
+        width: auto; }
