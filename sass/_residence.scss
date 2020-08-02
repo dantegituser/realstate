@@ -1,0 +1,74 @@
+#residence-detail #hero{
+    background-image: url(../img/04.jpg);
+    background-position: center center;
+    h4.residence-name{
+        font-size: 6em;
+        font-family: 'Damion', cursive;
+        text-shadow: 2px 2px 2px #383837;
+        border: none;
+    }
+}
+
+#residence-detail{
+    
+    .content-small{
+        width:80%;
+        margin: 0 auto;
+        height: 100%;
+        .content-left{
+            width:65%;
+            float: left;
+            margin-bottom: 40px;
+            img{
+                max-width: 100%;
+            }
+            h5 {
+                font-size: 3em;
+            }
+            p{
+                font-size: 1.3em;
+                margin-bottom: 30px;
+            }
+        }
+        .name-residence-effect{
+            width: 10%;
+            float: right;
+            overflow: hidden;
+            height: 200vh;
+            p {
+                font-family: 'Damion', cursive;
+                font-size: 8em;
+                transform: rotate(-90deg);
+                -webkit-transform: rotate(-90deg);
+                white-space: nowrap;
+                text-align: right;
+            }
+        }
+    .galeria-detalle{
+        display: flex;
+        flex-wrap: wrap;
+        .img-gal-cont{
+            flex: 1 0 auto;
+            width: 45%;
+            margin-right: 5px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            height: 200px;
+            img {
+                max-height: 100%;
+                display: block;
+                transition:  transform 1s ease;
+                -webkit-transition:  transform 1s ease;
+
+            }
+            &:hover{
+                img{
+                    transform: scale(1.2);
+                    -webkit-transform: scale(1.2);
+                }
+            }
+            
+        }
+    }
+    }
+}

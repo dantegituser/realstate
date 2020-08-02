@@ -43,5 +43,27 @@ tlh1.to('.archtitle', 24 ,{ left: '-10%',ease:Linear.easeNone},'h1movement')
 .to('.inttitle', 24 ,{ left: '90%',ease:Linear.easeNone},'h1movement');
 //TweenMax.fromTo('.archtitle', 24 ,{ left:'110%' }, { left: '-10%',ease:Linear.easeNone, repeat: -1}, 24);
 
+var linkResidence = document.getElementsByClassName('img-gallery');
 
+if(linkResidence !== null){
+    linkGal();
+    //console.log(linkResidence)
+}
+    
+
+
+
+function linkGal(){
+
+
+    for(let item of linkResidence){
+        item.addEventListener('click', () => {
+            window.location = 'residence.html';
+        });
+    }
+
+
+    
+    
+}
 })

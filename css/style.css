@@ -17,6 +17,10 @@ body {
   font-weight: 300;
   line-height: 1.6; }
 
+.clearfix {
+  clear: both;
+  height: 0; }
+
 .main-container {
   width: 100%;
   position: relative; }
@@ -68,6 +72,9 @@ body #hero {
   font-family: 'Damion', cursive;
   color: white;
   font-size: 3rem; }
+  #navigation-container .navigation-content .logo a {
+    color: white;
+    text-decoration: none; }
 
 #navigation-container .navigation-content .menu_button {
   padding: 10px;
@@ -494,6 +501,9 @@ footer {
           font-size: 1.6em;
           font-weight: bold;
           border-bottom: 2px solid blue; }
+        .architecture-cont .architecture-widget .listarch .list-address li a {
+          color: black;
+          text-decoration: none; }
     .architecture-cont .architecture-widget .imagen-arch {
       flex: 1 0 50%;
       position: relative;
@@ -504,3 +514,235 @@ footer {
         left: 0;
         max-height: 100%;
         width: auto; }
+
+#residence-detail #hero {
+  background-image: url(../img/04.jpg);
+  background-position: center center; }
+  #residence-detail #hero h4.residence-name {
+    font-size: 6em;
+    font-family: 'Damion', cursive;
+    text-shadow: 2px 2px 2px #383837;
+    border: none; }
+
+#residence-detail .content-small {
+  width: 80%;
+  margin: 0 auto;
+  height: 100%; }
+  #residence-detail .content-small .content-left {
+    width: 65%;
+    float: left;
+    margin-bottom: 40px; }
+    #residence-detail .content-small .content-left img {
+      max-width: 100%; }
+    #residence-detail .content-small .content-left h5 {
+      font-size: 3em; }
+    #residence-detail .content-small .content-left p {
+      font-size: 1.3em;
+      margin-bottom: 30px; }
+  #residence-detail .content-small .name-residence-effect {
+    width: 10%;
+    float: right;
+    overflow: hidden;
+    height: 200vh; }
+    #residence-detail .content-small .name-residence-effect p {
+      font-family: 'Damion', cursive;
+      font-size: 8em;
+      transform: rotate(-90deg);
+      -webkit-transform: rotate(-90deg);
+      white-space: nowrap;
+      text-align: right; }
+  #residence-detail .content-small .galeria-detalle {
+    display: flex;
+    flex-wrap: wrap; }
+    #residence-detail .content-small .galeria-detalle .img-gal-cont {
+      flex: 1 0 auto;
+      width: 45%;
+      margin-right: 5px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      height: 200px; }
+      #residence-detail .content-small .galeria-detalle .img-gal-cont img {
+        max-height: 100%;
+        display: block;
+        transition: transform 1s ease;
+        -webkit-transition: transform 1s ease; }
+      #residence-detail .content-small .galeria-detalle .img-gal-cont:hover img {
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2); }
+
+#team #hero {
+  background-image: url(../img/01.jpg);
+  background-position: center center; }
+  #team #hero::before {
+    width: 100%;
+    height: 100%;
+    display: block;
+    content: '';
+    background-color: rgba(131, 145, 245, 0.4); }
+  #team #hero h4.title-name {
+    font-size: 6em;
+    font-family: 'Damion', cursive;
+    text-shadow: 2px 2px 2px #383837;
+    border: none;
+    text-align: center; }
+
+#team-section .content-small {
+  width: 80%;
+  margin: 0 auto;
+  height: 100%; }
+  #team-section .content-small .content-left {
+    width: 65%;
+    float: left;
+    margin-bottom: 40px; }
+  #team-section .content-small .name-residence-effect {
+    width: 20%;
+    float: right;
+    height: 700px; }
+    #team-section .content-small .name-residence-effect p {
+      font-family: 'Damion', cursive;
+      font-size: 12em;
+      transform: rotate(-90deg) translateX(-150%);
+      -webkit-transform: rotate(-90deg) translateX(-150%);
+      white-space: nowrap;
+      text-align: right; }
+
+#team-section .teamcard-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  #team-section .teamcard-container .card {
+    flex: 1 0 200px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 30rem; }
+    #team-section .teamcard-container .card * {
+      font-family: 'roboto', sans-serif; }
+    #team-section .teamcard-container .card__side {
+      height: 30rem;
+      transition: all .8s ease;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      backface-visibility: hidden;
+      border-radius: 3px;
+      overflow: hidden;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+      #team-section .teamcard-container .card__side--front {
+        background: linear-gradient(-180deg, #e9e8e7 70%, #7d68f1 30%); }
+      #team-section .teamcard-container .card__side--back {
+        transform: rotateY(180deg); }
+
+.teamcard-container .card:hover .card__side--front {
+  transform: rotateY(-180deg); }
+
+.teamcard-container .card:hover .card__side--back {
+  transform: rotateY(0) !important; }
+
+#team-section .teamcard-container .card__side--front .profile-img img {
+  border-radius: 50%;
+  border: 1px solid #e7e7e7; }
+
+#team-section .teamcard-container .card__side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; }
+  #team-section .teamcard-container .card__side .name-team {
+    font-weight: bold;
+    font-size: 2em; }
+  #team-section .teamcard-container .card__side .email-team {
+    text-align: center; }
+    #team-section .teamcard-container .card__side .email-team span {
+      padding: 5px 12px;
+      background: linear-gradient(90deg, #f5a351, #a86e17);
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      color: white;
+      font-size: 1.3em; }
+  #team-section .teamcard-container .card__side .position-name {
+    font-size: 2em;
+    font-weight: bold;
+    color: white; }
+
+#team-section .teamcard-container .card__side--back {
+  padding: 10px;
+  text-align: center; }
+  #team-section .teamcard-container .card__side--back p {
+    font-size: 1.2em; }
+
+#contact #hero {
+  height: 0;
+  margin-bottom: 0; }
+  #contact #hero #navigation-container {
+    background-color: black !important;
+    background: linear-gradient(0deg, black, black); }
+
+#contact .contact-cont {
+  background-color: #094e9c;
+  padding-top: 60px;
+  padding-bottom: 40px; }
+  #contact .contact-cont .content-small {
+    width: 80%;
+    margin: 0 auto; }
+    #contact .contact-cont .content-small * {
+      color: white;
+      font-size: 1.2em; }
+    #contact .contact-cont .content-small h1 {
+      text-align: left;
+      font-family: 'Damion', cursive;
+      font-size: 6em;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 2px #afafae; }
+
+#contact .contact-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  #contact .contact-content * {
+    font-family: 'roboto', sans-serif; }
+  #contact .contact-content .contact-left {
+    flex: 1 0  50%;
+    align-self: flex-start; }
+    #contact .contact-content .contact-left > div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px; }
+      #contact .contact-content .contact-left > div p {
+        flex: 1 0 auto;
+        font-size: 1.3rem;
+        font-family: 'roboto', sans-serif;
+        margin-left: 20px; }
+      #contact .contact-content .contact-left > div img {
+        flex: 0 1 auto;
+        align-self: flex-start; }
+  #contact .contact-content .contact-right {
+    flex: 1 0 50%;
+    display: flex;
+    flex-direction: column; }
+    #contact .contact-content .contact-right p {
+      margin-bottom: 10px; }
+    #contact .contact-content .contact-right input, #contact .contact-content .contact-right textarea, #contact .contact-content .contact-right button {
+      background: none;
+      border: 1px solid white;
+      padding: 3px 5px;
+      margin-bottom: 10px;
+      width: 80%;
+      font-weight: 300; }
+      #contact .contact-content .contact-right input::placeholder, #contact .contact-content .contact-right textarea::placeholder, #contact .contact-content .contact-right button::placeholder {
+        color: white;
+        font-weight: 200; }
+    #contact .contact-content .contact-right input:focus::placeholder, #contact .contact-content .contact-right textarea:focus::placeholder {
+      visibility: hidden; }
+    #contact .contact-content .contact-right button {
+      width: 30%; }
+    #contact .contact-content .contact-right button:hover {
+      background-color: white;
+      color: #094e9c; }
+    #contact .contact-content .contact-right textarea {
+      max-height: 100px; }

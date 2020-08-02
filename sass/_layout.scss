@@ -62,6 +62,10 @@ background: linear-gradient(90deg, rgba(128,186,247,0.5) 1%, rgba(128,186,247,0.
         font-family: 'Damion', cursive;
         color:white;
         font-size: 3rem;
+        a{
+            color: white;
+            text-decoration: none;
+        }
     }
     .menu_button{
         padding:10px;
