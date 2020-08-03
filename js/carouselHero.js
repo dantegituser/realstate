@@ -6,31 +6,38 @@ document.addEventListener('DOMContentLoaded', () => {
     .staggerFromTo('#menuFull ul li', 0.5, { y: 100, opacity: 0 }, { y: 0, opacity: 1}, 0.1);
 
     var botonAbrirMenu = document.querySelector('.menu_button');
-botonAbrirMenu.addEventListener('click', () => {
-    tlMenu.play(0);
-});
+
+
+        botonAbrirMenu.addEventListener('click', () => {
+            tlMenu.play(0);
+        });
+
 
 var botonCerrarMenu = document.querySelector('.closeMenu span');
 botonCerrarMenu.addEventListener('click', () => {
     tlMenu.reverse(0);
 });
 
+var w = window.innerWidth;
+console.log(w);
+if(w > 678){
+    moverSlider();
+}
 
-
- // moverSlider();
+  
 function moverSlider(){
     var tl = new TimelineMax({ repeat: 2});
 
     tl.to('.slide1', 0.5, { opacity: 1})
-    .to('.slide1', 0.5, { opacity: 0}, 2)
-    .to('.slide2', 0.5, { opacity: 1})
-    .to('.slide2', 0.5, { opacity: 0}, 4)
-    .to('.slide3', 0.5, { opacity: 1})
-    .to('.slide3', 0.5, { opacity: 0}, 6)
-    .to('.slide4', 0.5, { opacity: 1})
-    .to('.slide4', 0.5, { opacity: 0}, 8)
-    .to('.slide5', 0.5, { opacity: 1})
-    .to('.slide5', 0.5, { opacity: 0}, 10);
+    .to('.slide1', 0.5, { opacity: 0},3)
+    .to('.slide2', 0.5, { opacity: 1},3)
+    .to('.slide2', 0.5, { opacity: 0},6)
+    .to('.slide3', 0.5, { opacity: 1},6)
+    .to('.slide3', 0.5, { opacity: 0},9)
+    .to('.slide4', 0.5, { opacity: 1},9)
+    .to('.slide4', 0.5, { opacity: 0},12)
+    .to('.slide5', 0.5, { opacity: 1},12)
+    .to('.slide5', 0.5, { opacity: 0},15);
 
 }
 
@@ -47,7 +54,6 @@ var linkResidence = document.getElementsByClassName('img-gallery');
 
 if(linkResidence !== null){
     linkGal();
-    //console.log(linkResidence)
 }
     
 
@@ -60,10 +66,6 @@ function linkGal(){
         item.addEventListener('click', () => {
             window.location = 'residence.html';
         });
-    }
-
-
-    
-    
+    }   
 }
 })

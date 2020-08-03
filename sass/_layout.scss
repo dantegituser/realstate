@@ -11,6 +11,10 @@ height: 80vh;
 align-items: center;
 position: relative;
 margin-bottom: 30px;
+@media only screen and (max-width: 600px){
+    height: 200px;
+    margin-bottom: 0;
+}
 .header-container{
     position: absolute;
     top:0;
@@ -28,7 +32,6 @@ margin-bottom: 30px;
 background: -moz-linear-gradient(90deg, rgba(128,186,247,0.5) 1%, rgba(128,186,247,0.5) 100%);
 background: -webkit-linear-gradient(90deg, rgba(128,186,247,0.5) 1%, rgba(128,186,247,0.5) 100%);
 background: linear-gradient(90deg, rgba(128,186,247,0.5) 1%, rgba(128,186,247,0.5) 100%);
-
 
         .navigation-content{
             width:80%;
@@ -124,8 +127,16 @@ background: linear-gradient(90deg, rgba(128,186,247,0.5) 1%, rgba(128,186,247,0.
             cursor: pointer;
             transition: font-size 0.5s ease;
             -webkit-transition: font-size 0.5s ease;
+            @media only screen and (max-width: 600px){
+                font-size: 2em;
+            }
+            
             &:hover{
                 font-size: 5rem;
+                @media only screen and (max-width: 600px){
+                    font-size: 2em;
+                }
+                
             }
         }
     }
@@ -137,6 +148,10 @@ background: linear-gradient(90deg, rgba(128,186,247,0.5) 1%, rgba(128,186,247,0.
         font-family: 'Damion', cursive;
         color:#fff;
         font-size: 6em;
+        @media only screen and (max-width: 600px){
+           font-size: 4em;
+        }
+        
         &::before{
             transition: width 0.5s ease;
         -webkit-transition: width 0.5s ease;

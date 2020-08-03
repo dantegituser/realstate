@@ -13,15 +13,27 @@
         text-align: center;
         font-size: 8em;
         text-shadow: 4px 4px 2px #c0a54b;
+        @media only screen and (max-width: 600px){
+            font-size: 4em;
+        }
+        
     }
     .content-small{
         width: 80%;
         margin: 0 auto;
+        @media only screen and (max-width: 600px){
+            width: 90%;
+        }
+        
     }
     .architecture-widget {
         display: flex;
         align-items: flex-start;
         justify-content: space-around;
+        @media only screen and (max-width: 600px){
+            flex-direction: column;
+        }
+        
         
         .listarch{
             height: 400px;
@@ -49,6 +61,11 @@
             flex: 1 0 50%;
             position: relative;
             height: 400px;
+            @media only screen and (max-width: 600px){
+                position: initial;
+                display: none;
+            }
+            
 
             img{
                 position: absolute;
@@ -56,6 +73,9 @@
                 left: 0;
                 max-height: 100%;
                 width: auto;
+                @media only screen and (max-width: 600px){
+                    position: initial;
+                }
             }
         }
     }

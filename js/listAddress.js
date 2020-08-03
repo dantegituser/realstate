@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 var w = window.innerWidth;
-console.log(w)
+//console.log(w)
 if(w < 780){
     liHover.forEach(element => {
  

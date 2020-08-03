@@ -32,6 +32,10 @@ body #hero {
   align-items: center;
   position: relative;
   margin-bottom: 30px; }
+  @media only screen and (max-width: 600px) {
+    body #hero {
+      height: 200px;
+      margin-bottom: 0; } }
   body #hero .header-container {
     position: absolute;
     top: 0;
@@ -122,8 +126,14 @@ body #hero {
       cursor: pointer;
       transition: font-size 0.5s ease;
       -webkit-transition: font-size 0.5s ease; }
+      @media only screen and (max-width: 600px) {
+        #menuFull .closeMenu span {
+          font-size: 2em; } }
       #menuFull .closeMenu span:hover {
         font-size: 5rem; }
+        @media only screen and (max-width: 600px) {
+          #menuFull .closeMenu span:hover {
+            font-size: 2em; } }
   #menuFull ul {
     list-style: none;
     flex: 1 0 30%; }
@@ -131,6 +141,9 @@ body #hero {
     font-family: 'Damion', cursive;
     color: #fff;
     font-size: 6em; }
+    @media only screen and (max-width: 600px) {
+      #menuFull ul li {
+        font-size: 4em; } }
     #menuFull ul li::before {
       transition: width 0.5s ease;
       -webkit-transition: width 0.5s ease;
@@ -168,6 +181,9 @@ body #hero {
   align-items: center;
   justify-content: center;
   width: 400px; }
+  @media only screen and (max-width: 600px) {
+    #buscador {
+      width: 100%; } }
   #buscador h4 {
     font-size: 3em;
     color: white;
@@ -177,6 +193,10 @@ body #hero {
     border-right: 2px solid rgba(255, 255, 255, 0.7);
     white-space: nowrap;
     overflow: hidden; }
+    @media only screen and (max-width: 600px) {
+      #buscador h4 {
+        font-size: 2em;
+        transform: none !important; } }
   #buscador input {
     width: 100%;
     padding: 15px 10px 10px;
@@ -249,8 +269,16 @@ body #hero {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: nowrap; }
+    @media only screen and (max-width: 600px) {
+      .home-section-cont .content-small {
+        width: 100%;
+        padding: 0 10px;
+        flex-direction: column; } }
     .home-section-cont .content-small .homedesc {
       flex: 0 0 30%; }
+      @media only screen and (max-width: 600px) {
+        .home-section-cont .content-small .homedesc {
+          margin-bottom: 20px; } }
       .home-section-cont .content-small .homedesc h3 {
         font-size: 2em;
         margin-bottom: 10px; }
@@ -283,6 +311,10 @@ body #hero {
       max-height: 500px;
       overflow: hidden;
       position: relative; }
+      @media only screen and (max-width: 600px) {
+        .home-section-cont .content-small .homeimg {
+          width: 100% !important;
+          margin-bottom: 30px; } }
       .home-section-cont .content-small .homeimg img {
         display: block;
         width: 100%;
@@ -350,6 +382,10 @@ body #hero {
   #gallery.home-gallery-cont .content-small {
     width: 80%;
     margin: 0 auto; }
+    @media only screen and (max-width: 600px) {
+      #gallery.home-gallery-cont .content-small {
+        width: 90% !important;
+        margin-bottom: 30px; } }
     #gallery.home-gallery-cont .content-small h2 {
       font-weight: 100;
       text-decoration: underline;
@@ -358,6 +394,9 @@ body #hero {
     #gallery.home-gallery-cont .content-small .gallery-wrapper {
       display: flex;
       align-items: center; }
+      @media only screen and (max-width: 600px) {
+        #gallery.home-gallery-cont .content-small .gallery-wrapper {
+          flex-wrap: wrap; } }
       #gallery.home-gallery-cont .content-small .gallery-wrapper .img-gallery {
         display: block;
         flex: 0 1 25%;
@@ -369,6 +408,14 @@ body #hero {
         transition: 1s;
         -webkit-transition: 1s;
         position: relative; }
+        @media only screen and (max-width: 600px) {
+          #gallery.home-gallery-cont .content-small .gallery-wrapper .img-gallery::after {
+            display: none; } }
+        @media only screen and (max-width: 600px) {
+          #gallery.home-gallery-cont .content-small .gallery-wrapper .img-gallery {
+            flex: 1 0 50%;
+            width: 50%;
+            height: 200px; } }
       #gallery.home-gallery-cont .content-small .gallery-wrapper .img-gallery:hover {
         background-size: 150% 150%; }
         #gallery.home-gallery-cont .content-small .gallery-wrapper .img-gallery:hover::after {
@@ -428,6 +475,9 @@ body #hero {
   #locations.home-map-cont .content-small .map {
     margin: 0 auto;
     text-align: center; }
+    @media only screen and (max-width: 600px) {
+      #locations.home-map-cont .content-small .map iframe {
+        max-width: 100%; } }
 
 footer {
   background-color: black;
@@ -438,6 +488,13 @@ footer {
     margin: 0 auto;
     display: flex;
     justify-content: space-between; }
+    @media only screen and (max-width: 600px) {
+      footer .footer-cont {
+        width: 100%;
+        padding: 0 5px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center; } }
     footer .footer-cont .footer-col h4 {
       color: grey;
       font-size: 2em; }
@@ -470,6 +527,10 @@ footer {
       -moz-border-radius: 50%;
       border-radius: 50%;
       border: 1px solid #fff; }
+    @media only screen and (max-width: 600px) {
+      footer .footer-cont .footer-col {
+        flex: 1 0 auto;
+        margin-bottom: 20px; } }
 
 #architecture .main-container #hero {
   height: 60px; }
@@ -481,13 +542,22 @@ footer {
     text-align: center;
     font-size: 8em;
     text-shadow: 4px 4px 2px #c0a54b; }
+    @media only screen and (max-width: 600px) {
+      .architecture-cont h1 {
+        font-size: 4em; } }
   .architecture-cont .content-small {
     width: 80%;
     margin: 0 auto; }
+    @media only screen and (max-width: 600px) {
+      .architecture-cont .content-small {
+        width: 90%; } }
   .architecture-cont .architecture-widget {
     display: flex;
     align-items: flex-start;
     justify-content: space-around; }
+    @media only screen and (max-width: 600px) {
+      .architecture-cont .architecture-widget {
+        flex-direction: column; } }
     .architecture-cont .architecture-widget .listarch {
       height: 400px;
       overflow: hidden;
@@ -508,30 +578,51 @@ footer {
       flex: 1 0 50%;
       position: relative;
       height: 400px; }
+      @media only screen and (max-width: 600px) {
+        .architecture-cont .architecture-widget .imagen-arch {
+          position: initial;
+          display: none; } }
       .architecture-cont .architecture-widget .imagen-arch img {
         position: absolute;
         top: 0;
         left: 0;
         max-height: 100%;
         width: auto; }
+        @media only screen and (max-width: 600px) {
+          .architecture-cont .architecture-widget .imagen-arch img {
+            position: initial; } }
 
 #residence-detail #hero {
   background-image: url(../img/04.jpg);
   background-position: center center; }
+  @media only screen and (max-width: 600px) {
+    #residence-detail #hero {
+      background-size: cover;
+      margin-bottom: 20px; } }
   #residence-detail #hero h4.residence-name {
     font-size: 6em;
     font-family: 'Damion', cursive;
     text-shadow: 2px 2px 2px #383837;
     border: none; }
+    @media only screen and (max-width: 600px) {
+      #residence-detail #hero h4.residence-name {
+        font-size: 3em; } }
 
 #residence-detail .content-small {
   width: 80%;
   margin: 0 auto;
   height: 100%; }
+  @media only screen and (max-width: 600px) {
+    #residence-detail .content-small {
+      width: 90%; } }
   #residence-detail .content-small .content-left {
     width: 65%;
     float: left;
     margin-bottom: 40px; }
+    @media only screen and (max-width: 600px) {
+      #residence-detail .content-small .content-left {
+        width: 100%;
+        float: none; } }
     #residence-detail .content-small .content-left img {
       max-width: 100%; }
     #residence-detail .content-small .content-left h5 {
@@ -544,6 +635,11 @@ footer {
     float: right;
     overflow: hidden;
     height: 200vh; }
+    @media only screen and (max-width: 600px) {
+      #residence-detail .content-small .name-residence-effect {
+        float: none;
+        width: 100%;
+        display: none; } }
     #residence-detail .content-small .name-residence-effect p {
       font-family: 'Damion', cursive;
       font-size: 8em;
@@ -561,6 +657,9 @@ footer {
       margin-bottom: 20px;
       overflow: hidden;
       height: 200px; }
+      @media only screen and (max-width: 600px) {
+        #residence-detail .content-small .galeria-detalle .img-gal-cont {
+          height: auto; } }
       #residence-detail .content-small .galeria-detalle .img-gal-cont img {
         max-height: 100%;
         display: block;
@@ -573,6 +672,10 @@ footer {
 #team #hero {
   background-image: url(../img/01.jpg);
   background-position: center center; }
+  @media only screen and (max-width: 600px) {
+    #team #hero {
+      background-size: cover;
+      margin-bottom: 20px; } }
   #team #hero::before {
     width: 100%;
     height: 100%;
@@ -585,19 +688,31 @@ footer {
     text-shadow: 2px 2px 2px #383837;
     border: none;
     text-align: center; }
+    @media only screen and (max-width: 600px) {
+      #team #hero h4.title-name {
+        font-size: 3em; } }
 
 #team-section .content-small {
   width: 80%;
   margin: 0 auto;
   height: 100%; }
+  @media only screen and (max-width: 600px) {
+    #team-section .content-small {
+      width: 95%; } }
   #team-section .content-small .content-left {
     width: 65%;
     float: left;
     margin-bottom: 40px; }
+    @media only screen and (max-width: 600px) {
+      #team-section .content-small .content-left {
+        width: 80%; } }
   #team-section .content-small .name-residence-effect {
     width: 20%;
     float: right;
     height: 700px; }
+    @media only screen and (max-width: 600px) {
+      #team-section .content-small .name-residence-effect {
+        width: 19%; } }
     #team-section .content-small .name-residence-effect p {
       font-family: 'Damion', cursive;
       font-size: 12em;
@@ -605,6 +720,9 @@ footer {
       -webkit-transform: rotate(-90deg) translateX(-150%);
       white-space: nowrap;
       text-align: right; }
+      @media only screen and (max-width: 600px) {
+        #team-section .content-small .name-residence-effect p {
+          font-size: 3em; } }
 
 #team-section .teamcard-container {
   display: flex;
@@ -704,6 +822,9 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between; }
+  @media only screen and (max-width: 600px) {
+    #contact .contact-content {
+      flex-direction: column; } }
   #contact .contact-content * {
     font-family: 'roboto', sans-serif; }
   #contact .contact-content .contact-left {
@@ -721,6 +842,9 @@ footer {
       #contact .contact-content .contact-left > div img {
         flex: 0 1 auto;
         align-self: flex-start; }
+    @media only screen and (max-width: 600px) {
+      #contact .contact-content .contact-left {
+        margin-bottom: 30px; } }
   #contact .contact-content .contact-right {
     flex: 1 0 50%;
     display: flex;
@@ -734,6 +858,9 @@ footer {
       margin-bottom: 10px;
       width: 80%;
       font-weight: 300; }
+      @media only screen and (max-width: 600px) {
+        #contact .contact-content .contact-right input, #contact .contact-content .contact-right textarea, #contact .contact-content .contact-right button {
+          width: 100%; } }
       #contact .contact-content .contact-right input::placeholder, #contact .contact-content .contact-right textarea::placeholder, #contact .contact-content .contact-right button::placeholder {
         color: white;
         font-weight: 200; }

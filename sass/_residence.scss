@@ -1,11 +1,18 @@
 #residence-detail #hero{
     background-image: url(../img/04.jpg);
     background-position: center center;
+    @media only screen and (max-width: 600px){
+                background-size: cover;
+                margin-bottom: 20px;
+            }
     h4.residence-name{
         font-size: 6em;
         font-family: 'Damion', cursive;
         text-shadow: 2px 2px 2px #383837;
         border: none;
+        @media only screen and (max-width: 600px){
+            font-size: 3em;
+        }
     }
 }
 
@@ -15,10 +22,17 @@
         width:80%;
         margin: 0 auto;
         height: 100%;
+        @media only screen and (max-width: 600px){
+            width:90%;
+        }
         .content-left{
             width:65%;
             float: left;
             margin-bottom: 40px;
+            @media only screen and (max-width: 600px){
+                width: 100%;
+                float: none;
+            }
             img{
                 max-width: 100%;
             }
@@ -35,6 +49,11 @@
             float: right;
             overflow: hidden;
             height: 200vh;
+            @media only screen and (max-width: 600px){
+                float: none;
+                width: 100%;
+                display: none;
+            }
             p {
                 font-family: 'Damion', cursive;
                 font-size: 8em;
@@ -54,6 +73,9 @@
             margin-bottom: 20px;
             overflow: hidden;
             height: 200px;
+            @media only screen and (max-width: 600px){
+                height: auto;
+            }
             img {
                 max-height: 100%;
                 display: block;
