@@ -1,14 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real Estate</title>
     <link rel="icon" type="image/png" href="img/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Coustard:wght@900&display=swap" rel="stylesheet">
+    <style>
+        .intro-wrapper {
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            position: fixed;
+            z-index: 999999;
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .sk-circle {
+            width: 40px;
+            max-width: 40px;
+            max-height: 40px;
+            height: 40px;
+            position: relative;
+            /* position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+            margin-bottom: 3rem;
+        }
+        
+        .progress-bar {
+            width: 300px;
+        }
+        
+        .progress-bar .bar-item {
+            width: 5px;
+            height: 10px;
+            background-color: white;
+            margin-bottom: 3rem;
+            border-radius: 3px;
+        }
+        
+        .progress-number {
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        
+        .scene3 {
+            position: relative;
+            height: 100%;
+        }
+        
+        .scene3 .logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .scene2 {
+            height: 100vh;
+            width: 100vw;
+            opacity: 1;
+            visibility: visible;
+            position: relative;
+        }
+        
+        .scene2 .text {
+            font-family: 'Coustard', serif;
+            font-size: 16rem;
+            color: grey;
+            white-space: nowrap;
+        }
+        
+        .scene2 .text01 {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .scene2 .text02 {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        
+        .scene2 .text03 {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .scene2 .text04 {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        /*esto es del codigo*/
+        
+        .sk-circle .sk-child {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        .sk-circle .sk-child:before {
+            content: '';
+            display: block;
+            margin: 0 auto;
+            width: 15%;
+            height: 15%;
+            background-color: #ffffff;
+            border-radius: 100%;
+            -webkit-animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
+            animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
+        }
+        
+        .sk-circle .sk-circle2 {
+            -webkit-transform: rotate(30deg);
+            -ms-transform: rotate(30deg);
+            transform: rotate(30deg);
+        }
+        
+        .sk-circle .sk-circle3 {
+            -webkit-transform: rotate(60deg);
+            -ms-transform: rotate(60deg);
+            transform: rotate(60deg);
+        }
+        
+        .sk-circle .sk-circle4 {
+            -webkit-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+        
+        .sk-circle .sk-circle5 {
+            -webkit-transform: rotate(120deg);
+            -ms-transform: rotate(120deg);
+            transform: rotate(120deg);
+        }
+        
+        .sk-circle .sk-circle6 {
+            -webkit-transform: rotate(150deg);
+            -ms-transform: rotate(150deg);
+            transform: rotate(150deg);
+        }
+        
+        .sk-circle .sk-circle7 {
+            -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+        
+        .sk-circle .sk-circle8 {
+            -webkit-transform: rotate(210deg);
+            -ms-transform: rotate(210deg);
+            transform: rotate(210deg);
+        }
+        
+        .sk-circle .sk-circle9 {
+            -webkit-transform: rotate(240deg);
+            -ms-transform: rotate(240deg);
+            transform: rotate(240deg);
+        }
+        
+        .sk-circle .sk-circle10 {
+            -webkit-transform: rotate(270deg);
+            -ms-transform: rotate(270deg);
+            transform: rotate(270deg);
+        }
+        
+        .sk-circle .sk-circle11 {
+            -webkit-transform: rotate(300deg);
+            -ms-transform: rotate(300deg);
+            transform: rotate(300deg);
+        }
+        
+        .sk-circle .sk-circle12 {
+            -webkit-transform: rotate(330deg);
+            -ms-transform: rotate(330deg);
+            transform: rotate(330deg);
+        }
+        
+        .sk-circle .sk-circle2:before {
+            -webkit-animation-delay: -1.1s;
+            animation-delay: -1.1s;
+        }
+        
+        .sk-circle .sk-circle3:before {
+            -webkit-animation-delay: -1s;
+            animation-delay: -1s;
+        }
+        
+        .sk-circle .sk-circle4:before {
+            -webkit-animation-delay: -0.9s;
+            animation-delay: -0.9s;
+        }
+        
+        .sk-circle .sk-circle5:before {
+            -webkit-animation-delay: -0.8s;
+            animation-delay: -0.8s;
+        }
+        
+        .sk-circle .sk-circle6:before {
+            -webkit-animation-delay: -0.7s;
+            animation-delay: -0.7s;
+        }
+        
+        .sk-circle .sk-circle7:before {
+            -webkit-animation-delay: -0.6s;
+            animation-delay: -0.6s;
+        }
+        
+        .sk-circle .sk-circle8:before {
+            -webkit-animation-delay: -0.5s;
+            animation-delay: -0.5s;
+        }
+        
+        .sk-circle .sk-circle9:before {
+            -webkit-animation-delay: -0.4s;
+            animation-delay: -0.4s;
+        }
+        
+        .sk-circle .sk-circle10:before {
+            -webkit-animation-delay: -0.3s;
+            animation-delay: -0.3s;
+        }
+        
+        .sk-circle .sk-circle11:before {
+            -webkit-animation-delay: -0.2s;
+            animation-delay: -0.2s;
+        }
+        
+        .sk-circle .sk-circle12:before {
+            -webkit-animation-delay: -0.1s;
+            animation-delay: -0.1s;
+        }
+        
+        @-webkit-keyframes sk-circleBounceDelay {
+            0%,
+            80%,
+            100% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+            40% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes sk-circleBounceDelay {
+            0%,
+            80%,
+            100% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+            40% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body id="home">
+    <div class="intro-wrapper">
+        <div class="content-wrapper scene1">
+            <div class="sk-circle loading-item">
+                <div class="sk-circle1 sk-child"></div>
+                <div class="sk-circle2 sk-child"></div>
+                <div class="sk-circle3 sk-child"></div>
+                <div class="sk-circle4 sk-child"></div>
+                <div class="sk-circle5 sk-child"></div>
+                <div class="sk-circle6 sk-child"></div>
+                <div class="sk-circle7 sk-child"></div>
+                <div class="sk-circle8 sk-child"></div>
+                <div class="sk-circle9 sk-child"></div>
+                <div class="sk-circle10 sk-child"></div>
+                <div class="sk-circle11 sk-child"></div>
+                <div class="sk-circle12 sk-child"></div>
+            </div>
+            <div class="progress-bar">
+                <div class="bar-item"></div>
+            </div>
+            <div class="progress-number">
+                <span class="number-percent">1</span><span>%</span>
+            </div>
+        </div>
+        <!--scebne1-->
+        <div class="scene2">
+            <div class="text text01">
+                Architecture
+            </div>
+            <div class="text text02">
+                House
+            </div>
+            <div class="text text03">
+                Interior
+            </div>
+            <div class="text text04">
+                Sale-Rent
+            </div>
+        </div>
+        <!--scene2-->
+        <div class="scene3">
+            <div class="logo">
+                <img src="img/logo-realestate.png" alt="" />
+            </div>
+        </div>
+    </div>
     <div id="top" style="height: 0;">&nbsp;</div>
     <div class="main-container">
         <div id="menuFull">
@@ -33,18 +351,18 @@
             </div>
             <div class="header-container">
                 <div id="navigation-container">
-                   
-                        <div class="navigation-content">
-                            <div class="logo">
-                                Real Estate
-                            </div>
-                            <div class="menu_button">
-                                <div>&nbsp;</div>
-                                <div>&nbsp;</div>
-                                <div>&nbsp;</div>
-                            </div>
+
+                    <div class="navigation-content">
+                        <div class="logo">
+                            Real Estate
                         </div>
-                    
+                        <div class="menu_button">
+                            <div>&nbsp;</div>
+                            <div>&nbsp;</div>
+                            <div>&nbsp;</div>
+                        </div>
+                    </div>
+
                 </div>
                 <div id="buscador">
                     <h4 class="anim-typewr">Find your new house</h4>
@@ -55,25 +373,27 @@
                     </div>
                 </div>
             </div>
-    
+
         </section>
-    
+
         <section id="architecture" class="home-section-cont">
             <h1 class="archtitle">Architecture</h1>
             <div class="content-small">
                 <div class="homedesc">
                     <h3>Architecture Nowadays</h3>
-                    
-<p>
-    Over the last 15 years, we’ve been awarded nearly 600 awards for design excellence and have placed high in nearly every industry ranking. In 2017 and 2019, Fast Company named us one of the 10 most innovative architecture firms in the world.</p>
 
-<p>
-    "We design architecture that enriches the fabric of community and creates a better "Quality of Life."
-</p>
+                    <p>
+                        Over the last 15 years, we’ve been awarded nearly 600 awards for design excellence and have placed high in nearly every industry ranking. In 2017 and 2019, Fast Company named us one of the 10 most innovative architecture firms in the world.</p>
 
-<p>
-    The practice of Architecture has permitted our firm to specialist in the design of Village Resorts, Traditional Neighborhood Districts, Town Centers, and Transit Villages across three continents. Our practice  has serviced the needs of governments, institutions, militaries, and the private industry for over two decades.  Because of our expertise in Town Planning, many developers including some of the largest home builders in the United States select us to master plan their communities and stay as the architect-of-record for their developments.
-</p>
+                    <p>
+                        "We design architecture that enriches the fabric of community and creates a better "Quality of Life."
+                    </p>
+
+                    <p>
+                        The practice of Architecture has permitted our firm to specialist in the design of Village Resorts, Traditional Neighborhood Districts, Town Centers, and Transit Villages across three continents. Our practice has serviced the needs of governments, institutions,
+                        militaries, and the private industry for over two decades. Because of our expertise in Town Planning, many developers including some of the largest home builders in the United States select us to master plan their communities and
+                        stay as the architect-of-record for their developments.
+                    </p>
 
 
                     <div><a href="#">More Info </a></div>
@@ -87,11 +407,11 @@
                 </div>
             </div>
         </section>
-    
-    
+
+
         <section id="interior" class="home-section-cont">
             <h1 class="inttitle">Interior</h1>
-            
+
             <div class="content-small">
                 <div class="homeimg">
                     <img src="img/img-home2.jpg" alt="" />
@@ -112,18 +432,18 @@
 
                     <div><a href="#">More Info </a></div>
                 </div>
-                
+
             </div>
         </section>
         <section id="gallery" class="home-gallery-cont">
             <div class="content-small">
                 <h2>Gallery</h2>
                 <div class="gallery-wrapper">
-                    
+
                     <div class="img-gallery">
                         &nbsp;
                     </div>
-                    
+
                     <div class="img-gallery">
                         &nbsp;
                     </div>
@@ -135,11 +455,11 @@
                     </div>
                 </div>
             </div>
-    
+
         </section>
-    
+
         <section id="locations" class="home-map-cont">
-            
+
             <div class="content-small">
                 <h2>Locations</h2>
                 <div class="map">
@@ -147,7 +467,7 @@
                 </div>
             </div>
         </section>
-    
+
         <footer>
             <div class="footer-cont">
                 <div class="footer-col">
@@ -160,7 +480,7 @@
                     <h4>Contact us</h4>
                     <p>email@realstate.net</p>
                     <p>+92 789654456</p>
-                    
+
                 </div>
                 <div class="footer-col">
                     <h4>Menu</h4>
@@ -177,23 +497,170 @@
                 <div class="footer-col">
                     <div class="icons-footer">
                         <ul>
-                            <li><a href="#"><img src="img/face-icon.png" alt=""></a></li>
-                            <li><a href="#"><img src="img/insta-icon.png" alt=""></a></li>
-                            <li><a href="#"><img src="img/youtube-icon.png" alt=""></a></li>
-                            <li><a href="#"><img src="img/twitter-icon.png" alt=""></a></li>
+                            <li>
+                                <a href="#"><img src="img/face-icon.png" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="img/insta-icon.png" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="img/youtube-icon.png" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="img/twitter-icon.png" alt=""></a>
+                            </li>
                         </ul>
                         <div class="totop">
                             <a href="#top"><i class="fas fa-arrow-up"></i></a>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </footer>
-    </div><!--contenedor principal-->
-    
+    </div>
+    <!--contenedor principal-->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+    <script>
+        setTimeout(() => {
+            let tl1 = gsap.timeline();
+            let tl2 = gsap.timeline({
+                paused: true
+            });
+            let tl3 = gsap.timeline({
+                paused: true
+            });
+            let Cont = {
+                    val: 0
+                },
+                NewVal = 100;
+
+            tl1.eventCallback("onComplete", function() {
+                tl2.play(0);
+            });
+            tl2.eventCallback("onComplete", function() {
+                tl3.play(0);
+            });
+
+            tl1.to('.bar-item', {
+                    duration: 5,
+                    width: "300px",
+                    ease: Power0.easeNone
+                }, 1)
+                .to(Cont, {
+                    duration: 5,
+                    val: NewVal,
+                    roundProps: "val",
+                    onUpdate: function() {
+                        document.querySelector(".number-percent").innerHTML = Cont.val;
+                    }
+                }, 1)
+                .to('.loading-item', {
+                    duration: 2,
+                    opacity: 0,
+                    display: 'none',
+                    delay: 1,
+                    ease: "back.inOut(1.7)"
+                }, 'luego')
+                .to('.progress-bar', {
+                    duration: 2,
+                    y: -1000,
+                    opacity: 0,
+                    display: 'none',
+                    delay: 1,
+                    ease: "back.inOut(1.7)"
+                }, 'luego')
+                .to('.progress-number', {
+                    duration: 2,
+                    y: 1000,
+                    opacity: 0,
+                    display: 'none',
+                    delay: 1,
+                    ease: "back.inOut(1.7)"
+                }, 'luego')
+                .to('.scene1', {
+                    duration: 1,
+                    autoAlpha: 0,
+                    display: 'none',
+                });
+
+            tl2.to('.scene2', {
+                    duration: 1,
+                    autoAlpha: 1,
+                    display: 'block'
+                })
+                .fromTo('.text01', {
+                    xPercent: -100,
+                    color: '#353434'
+                }, {
+                    duration: 3,
+                    xPercent: 100,
+                    color: '#ffffff',
+                    autoAlpha: 0
+                })
+                .fromTo('.text02', {
+                    xPercent: 100,
+                    color: '#353434'
+                }, {
+                    duration: 3,
+                    xPercent: -100,
+                    color: '#ffffff',
+                    autoAlpha: 0
+                })
+                .fromTo('.text03', {
+                    xPercent: -100,
+                    color: '#353434'
+                }, {
+                    duration: 3,
+                    xPercent: 100,
+                    color: '#ffffff',
+                    autoAlpha: 0
+                })
+                .fromTo('.text04', {
+                    xPercent: 100,
+                    color: '#353434'
+                }, {
+                    duration: 3,
+                    xPercent: -100,
+                    color: '#ffffff',
+                    autoAlpha: 0
+                })
+                .to('.scene2', {
+                    duration: 0.5,
+                    autoAlpha: 0,
+                    display: 'none'
+                });
+
+            tl3.to('.scene3', {
+                    duration: 0.5,
+                    autoAlpha: 1,
+                    display: 'block'
+                })
+                .to('.scene3 .logo', {
+                    duration: 1,
+                    autoAlpha: 1
+                })
+                .to('.scene3 .logo', {
+                    duration: 2,
+                    autoAlpha: 0,
+                    delay: 2
+                })
+                // .to('.scene3', {
+                //     duration: 2,
+                //     autoAlpha: 0,
+                //     display: 'none'
+                // })
+                .to('.intro-wrapper', {
+                    duration: 0.5,
+                    height: 0,
+                    display: 'none'
+                });
+
+        }, 1000);
+    </script>
     <script src="js/carouselHero.js"></script>
 </body>
+
 </html>
